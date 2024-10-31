@@ -15,7 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
      const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
         document.querySelector('.cloud-banner')?.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        //localStorage.setItem('theme', theme);
+        try {
+            localStorage.setItem('theme', theme);
+        } catch (error) {
+            console.error("Error writing theme to localStorage:", error.message);
+        }
         
         const sunIcon = themeToggle.querySelector('.icon-sun');
         const moonIcon = themeToggle.querySelector('.icon-moon');
@@ -33,13 +38,32 @@ document.addEventListener("DOMContentLoaded", () => {
         setTheme(currentTheme === 'light' ? 'dark' : 'light');
     });
     
-    const initTheme = () => {
-        const urlTheme = new URLSearchParams(window.location.search).get('theme');       
-        const savedTheme = localStorage.getItem('theme') ;
-        const browserTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        setTheme(urlTheme || savedTheme || browserTheme || 'light');        
-    };
+    // const initTheme = () => {
+    //     const urlTheme = new URLSearchParams(window.location.search).get('theme');       
+    //     const savedTheme = localStorage.getItem('theme') ;
+    //     const browserTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    //     setTheme(urlTheme || savedTheme || browserTheme || 'light');        
+    // };
 
+    // initTheme();
+
+    // Safe functions for reading and writing to localStorage
+    const initTheme = () => {
+        let savedTheme;        
+       
+        try {
+            savedTheme = localStorage.getItem('theme');
+        } catch (error) {
+            console.error("Error reading theme from localStorage:", error.message);
+            savedTheme = null; 
+        }
+    
+        const urlTheme = new URLSearchParams(window.location.search).get('theme');
+        const browserTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';        
+        
+        setTheme(urlTheme || savedTheme || browserTheme || 'light');
+    };    
+   
     initTheme();
 
     // FAQ Toggle
