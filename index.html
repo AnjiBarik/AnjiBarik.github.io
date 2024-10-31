@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMarc Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="img/logo.png" alt="eMarc Logo" class="logo">           
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+            
+        </div>
+    </header>
+
+  <!-- Cloud Banner Section -->
+<section class="cloud-banner">
+    <div class="moon"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <h1>Welcome to eMarc</h1>
+    <p>Your one-stop shop for smart, streamlined solutions.</p>
+</section>
+
+<!-- Desktop Navigation Bar -->
+<nav id="desktop-nav" class="desktop-nav">
+    <a href="#section1">Main</a>
+    <a href="#section2">Live Demo</a>
+    <a href="#section3">Features</a>   
+    <a href="#section5">Deploy</a>
+    <a href="#section6">Benefits</a>
+    <a href="#section7">Admin Panel</a>
+    <a href="#section8">Gallery</a>
+    <a href="#section9">FAQ</a>
+    <a href="#section10">Contact</a>   
+</nav>
+
+<button id="nav-toggle-button" >☰</button>
+
+<!-- Mobile Floating Circular Navigation -->
+<div class="mobile-float-nav">
+    <div class="center-circle" >
+        ▲
+    </div>
+    <div class="nav-segment" data-target="section2">LiveDemo</div>
+    <div class="nav-segment" data-target="section3">Features</div>
+    <div class="nav-segment" data-target="section5">Deploy</div>
+    <div class="nav-segment" data-target="section8">Gallery</div>
+    <div class="nav-segment" data-target="section9">FAQ</div>
+    <div class="nav-segment" data-target="section10">Contact</div>
+</div>
+
+
+
+
+    <!-- Main Banner -->
+    <section id="section1" class="main-banner">
+        <h1>🏷️ Super Deals and Discounts: Shop Smart and Save Big on Top Products!</h1>
+        <p>Experience seamless integration with Google Sheets via React. Simplify and optimize data handling effortlessly.</p>        
+    </section>
+
+    <!-- Project Description Section -->
+    <section id="section2" class="project-description">
+        <h2>🎯 Project Description</h2>
+        <p>Welcome to the eMarc project! A React-based web app for efficient interaction with Google Sheets, focused on simplicity and performance optimization.</p>
+        <a href="https://anjibarik.github.io/do/" class="cta-link">Live Demo 🌐</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="section3" class="features">
+        <h2>🚀 Main Features</h2>
+        <div class="feature-item">
+            <section class="features-section">
+                <h2>Frontend in React</h2>
+                <div class="features-container">
+                    <div class="feature-card">
+                        <span class="emoji">🌍</span>
+                        <h3>Auto Language Detection</h3>
+                        <p>Detects language automatically based on browser settings.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="emoji">⏰</span>
+                        <h3>Timezone Handling</h3>
+                        <p>Handles timezone adjustments automatically for accurate display.</p>
+                    </div>
+            
+                    <div class="feature-card">
+                        <span class="emoji">🔐</span>
+                        <h3>Built-in Encryption</h3>
+                        <p>Encryption for secure data management and user privacy.</p>
+                    </div>
+            
+                    <div class="feature-card">
+                        <span class="emoji">☁️</span>
+                        <h3>Easy Configuration</h3>
+                        <p>Configure settings through JSON without rebuilding the project.</p>
+                    </div>
+            
+                    <div class="feature-card">
+                        <span class="emoji">📂</span>
+                        <h3>Seamless Uploads</h3>
+                        <p>Upload icons and images from cloud storage effortlessly.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        <div id="section4" class="feature-item">
+            <section class="features-section">
+                <h2>Google Sheets & Scripts Integration</h2>
+                <div class="features-container">
+                    <div class="feature-card">
+                        <span class="emoji">📊</span>
+                        <h3>Data Stored in Google Sheets</h3>
+                        <p>Store and access data smoothly with Google Sheets integration.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="emoji">🛠️</span>
+                        <h3>Standardized Interaction</h3>
+                        <p>Easy maintenance with Google Apps Script for reliable workflows.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </section>  
+
+  <!-- Steps to Deploy -->
+  <h2>🛠️ How to Deploy</h2>
+<section id="section5" class="steps">      
+    <table class="deployment-steps">
+        <tr>
+            <th>Step</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Step 1</td>
+            <td>✅ Prepare Google Sheets and Scripts by uploading templates and configuring access.</td>
+        </tr>
+        <tr>
+            <td>Step 2</td>
+            <td>✅ Configure the frontend with JSON paths, logos, and images.</td>
+        </tr>
+        <tr>
+            <td>Step 3</td>
+            <td>✅ Populate price lists directly in Google Sheets.</td>
+        </tr>
+        <tr>
+            <td>Step 4</td>
+            <td>✅ Ensure proper Google account access for smooth operation.</td>
+        </tr>
+    </table>
+</section>
+
+
+
+    <!-- Benefits Section -->
+    <section id="section6" class="benefits">
+        <h2>✨ Benefits</h2>
+        <div class="benefit-item">
+            <h3>Standardization</h3>
+            <p>Efficient data handling through a standardized approach.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Simplified Deployment</h3>
+            <p>Quick setup using public repositories, minimizing effort.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Minimal Code</h3>
+            <p>Reduces complexity by leveraging browser capabilities.</p>
+        </div>
+    </section>
+   
+<!-- Key Features Section -->
+<h2>📐 Key Features: Admin Panel & Encryption</h2>
+<section id="section7" class="key-features">   
+    <table class="deployment-steps">
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Admin Panel Activation</td>
+            <td>Double-click the globe during language selection.</td>
+        </tr>
+        <tr>
+            <td>🔑 Key Generation</td>
+            <td>Securely generate and manage RSA encryption keys.</td>
+        </tr>
+        <tr>
+            <td>📜 Order Decryption & Filtering</td>
+            <td>Streamlined and secure order data handling.</td>
+        </tr>
+    </table>
+</section>
+
+
+
+     <!-- Image Gallery Section -->
+     <section id="section8" class="image-gallery">        
+          <!-- Input Range  -->
+          <label for="scroll-range"><h2>Project Screenshots</h2></label>
+        <input type="range" id="scroll-range" min="0" value="0">
+        <div class="gallery-grid">
+            <!-- Example Image Item -->
+            <div class="gallery-item">
+                <img src="img/overwiewLazy.jpg" alt="Review" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Review</h3>
+                    <p>Simple easy interface</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/overwiew.jpg" alt="Review" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for each image in the gallery -->
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/specificLazy.jpg" alt="Product card" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Product card</h3>
+                    <p>Dark theme and reviews</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/specific.jpg" alt="Product card" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/catalogfiltersLazy.jpg" alt="Categories and filters" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Categories and filters</h3>
+                    <p>Category selection and advanced filter</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/catalogfilters.jpg" alt="Categories and filters" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/cartLazy.jpg" alt="Cart" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Cart</h3>
+                    <p>Convenient shopping cart with your favorite products</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/cart.jpg" alt="Cart" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/loginLazy.jpg" alt="Login" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Login</h3>
+                    <p>Easy login and registration with two-factor protection and Google or Facebook account</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/login.jpg" alt="Login" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/seachLazy.jpg" alt="Seach" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Seach</h3>
+                    <p>Advanced Search</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/seach.jpg" alt="Seach" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/togleadminLazy.jpg" alt="Start window" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Start window</h3>
+                    <p>Multiprice multilanguage admin panel</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/togleadmin.jpg" alt="Start window" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/orderLazy.jpg" alt="Order" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Order</h3>
+                    <p>Easy, customizable order window with data protection</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/order.jpg" alt="Order" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/keyLazy.jpg" alt="Key" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Key</h3>
+                    <p>Easy generation and testing of asymmetric keys for security</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/key.jpg" alt="Key" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/admincartLazy.jpg" alt="Admin panel" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Admin panel</h3>
+                    <p>Secure access filtering sorting and decryption of orders</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/admincart.jpg" alt="Admin panel" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>
+            <!-- Example: -->
+            <div class="gallery-item">
+                <img src="img/admintableLazy.jpg" alt="Admintable" class="thumbnail">
+                <div class="gallery-info">
+                    <h3>Admintable</h3>
+                    <p>Selecting a password-protected private key to decrypt order data</p>
+                    <button class="expand-btn">🔍</button>
+                </div>
+                <div class="gallery-overlay">
+                    <img src="img/admintable.jpg" alt="Admintable" class="full-image">
+                    <span class="close-overlay">&times;</span>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+  <!-- FAQ Section -->
+<section id="section9" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3><span class="plus-icon">+</span> What tools were used in eMarc?</h3>
+        <p class="faq-answer">eMarc uses React for the frontend and Google Sheets for data storage, integrated via Google Apps Script for automation.</p>
+    </div>
+    <div class="faq-item">
+        <h3><span class="plus-icon">+</span> How do I deploy the application?</h3>
+        <p class="faq-answer">Follow the steps in the How to Deploy section, including configuring Google Sheets and Scripts access and updating the config JSON.</p>
+    </div>
+    <div class="faq-item">
+        <h3><span class="plus-icon">+</span> How is the application maintained?</h3>
+        <p class="faq-answer">Regularly update Google Sheets and verify access permissions for uninterrupted functionality.</p>
+    </div>
+    <div class="faq-item">
+        <h3><span class="plus-icon">+</span> Where can I find examples of sheets and scripts?</h3>
+        <p class="faq-answer">Examples are available in the project's samples folder, along with Google Sheets templates and Google Scripts.</p>
+    </div>
+</section>
+
+
+   <!-- Contact Form Section -->
+<section id="section10" class="contact-form-section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit" id="submitBtn" disabled>Send Message</button>
+        <p id="formResponse"></p>
+    </form>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/watch?v=P4ALDytLAXQ&t=294s">YouTube</a>
+                <a href="https://www.instagram.com/cssjavascr?igsh=YzljYTk1ODg3Zg==">Instagram</a>
+                <a href="https://www.tiktok.com/@script.java?_d=secCgYIASAHKAESPgo8uaI%2BfZqqX3tvkL8sZTd6YEmifeed6wbY1qYdl0rL6AUTEL2NNsi9cKKTo7GsSuLBkwCB8yvpld7K1wS0GgA%3D&checksum=64abd715a82a552085916792e4df2e965fc8438d4a726ce6e8fac1f9c7629284&sec_uid=MS4wLjABAAAADHLgN9G_xkFFziE9wA2NnG0hch8ymbgAKUaQ5d42DEpvc6vTSL7py90wwAqbXQOy&sec_user_id=MS4wLjABAAAADHLgN9G_xkFFziE9wA2NnG0hch8ymbgAKUaQ5d42DEpvc6vTSL7py90wwAqbXQOy&share_app_id=1340&share_author_id=7304589370715407366&share_link_id=659e7a2b-b6da-4ca1-80cd-d264d91efa80&sharer_language=uk&timestamp=1728756771&u_code=eb78a48gc93h2d&ugbiz_name=Account&user_id=7304589370715407366&utm_campaign=client_share&utm_source=viber&_r=1">Tik</a>
+            </div>            
+        </div>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle and FAQ -->
+    <script src="scripts.js"></script>
+</body>
+</html>
