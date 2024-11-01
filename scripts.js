@@ -36,17 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle?.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         setTheme(currentTheme === 'light' ? 'dark' : 'light');
-    });
+    });    
     
-    // const initTheme = () => {
-    //     const urlTheme = new URLSearchParams(window.location.search).get('theme');       
-    //     const savedTheme = localStorage.getItem('theme') ;
-    //     const browserTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    //     setTheme(urlTheme || savedTheme || browserTheme || 'light');        
-    // };
-
-    // initTheme();
-
     // Safe functions for reading and writing to localStorage
     const initTheme = () => {
         let savedTheme;        
@@ -232,46 +223,3 @@ document.querySelectorAll('.close-overlay').forEach(closeBtn => {
     });
 
 });
-
-
-
-//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     const validateForm = () => {
-//         const isEmailValid = emailPattern.test(emailField.value.trim());
-//         const isMessageValid = messageField.value.trim() !== '';
-//         submitBtn.disabled = !(isEmailValid && isMessageValid);
-//     };
-    
-//     emailField.addEventListener('input', validateForm);
-//     messageField.addEventListener('input', validateForm);
-
-//     contactForm.addEventListener('submit', async (e) => {
-//         submitBtn.disabled = true;
-//         e.preventDefault();
-//         formResponse.textContent = ''; 
-
-//         if (!emailPattern.test(emailField.value.trim())) {
-//             formResponse.textContent = 'Please enter a valid email address.';
-//             formResponse.style.color = 'red';
-//             return;
-//         }
-
-//         const formData = new FormData(contactForm);
-//         try {
-//             const response = await fetch('https://script.google.com/macros/s/AKfycbxUbPt7dwfbK928m-KRled0s4km18cJCgZHV9Nohf7MnvCoxxrSvMXqs1zblzi1wWfq/exec', { method: 'POST', body: formData });
-//             if (response.ok) {
-//                 formResponse.textContent = 'Message sent successfully!';
-//                 formResponse.style.color = 'green';
-//                 contactForm.reset();
-//                 submitBtn.disabled = false;
-//             } else {
-//                 formResponse.textContent = 'Error sending message. Please try again later.';
-//                 formResponse.style.color = 'red';
-//             }
-//         } catch (error) {
-//             console.error('Error sending form:', error.message);
-//             formResponse.textContent = 'Error connecting to the server. Please try again.';
-//             formResponse.style.color = 'red';
-//         }
-//     });
-// });
