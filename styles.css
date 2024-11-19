@@ -287,6 +287,9 @@ body {
     color: white;
     padding: 10px;
     text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-container a {
@@ -294,6 +297,34 @@ body {
     text-decoration: none;
     margin: 0 5px;
 }
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    font-size: 0.9em;
+    color: #333;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease; 
+  }
+  
+  .social-icon img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .social-icon img:hover {
+    color: #ff6600; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.1); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  }
 
 /* Features Section */
 .features-section {
@@ -381,6 +412,8 @@ body {
 
 .cloud-banner h1 {
     font-size: 2.5em;
+    z-index: 100;
+    position: relative;
 }
 
 .cloud-banner .moon {
@@ -574,6 +607,10 @@ table.deployment-steps td {
     font-size: 1em;   
     text-align: left;
 }
+
+.nowrap {
+    white-space: nowrap;
+}  
 
 /* Additional styling for headings */
 #section5 h2 {
