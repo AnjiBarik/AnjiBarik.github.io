@@ -283,13 +283,14 @@ body {
 
 /* Footer */
 .footer-container {
-    background-color: #333;
+    background-color: #666;
     color: white;
     padding: 10px;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .footer-container a {
@@ -362,6 +363,14 @@ body {
 }
 
 /* FAQ Section */
+#section9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 10px 10%;
+}
+
 .faq-item h3 {
     cursor: pointer;
     background-color: #00796b;
