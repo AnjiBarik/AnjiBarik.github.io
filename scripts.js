@@ -111,11 +111,13 @@ document.querySelectorAll('.close-overlay').forEach(closeBtn => {
     
     // Scroll to specific sections when navigation segments are clicked
     navSegments.forEach(segment => {
-        segment.addEventListener("click", () => {
+        segment.addEventListener("click", (event) => {
+            event.stopPropagation();
             const targetSection = document.getElementById(segment.getAttribute("data-target"));
-            targetSection?.scrollIntoView({ behavior: "smooth" });
+            targetSection?.scrollIntoView({ behavior: "smooth", block: "start" });
         });
     });
+    
 
     // Scroll to top when center circle is clicked
     centerCircle.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
