@@ -27,7 +27,7 @@
     <div class="cloud cloud2"></div>
     <div class="cloud cloud3"></div>
     <h1>Welcome to eMarc</h1>
-    <p>Your one-stop shop for smart, streamlined solutions.</p>
+    <h3>Your one-stop shop for smart, streamlined solutions.</h3>
 </section>
 
 <!-- Desktop Navigation Bar -->
@@ -386,10 +386,10 @@
     <h2>Contact Me</h2>
     <form id="contactForm">
         <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" minlength="5" maxlength="256" required autocomplete="email">
         
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" minlength="5" maxlength="256" required></textarea>
         
         <button type="submit" id="submitBtn" disabled>Send Message</button>
         <p id="formResponse"></p>

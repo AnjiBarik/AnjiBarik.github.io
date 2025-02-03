@@ -89,21 +89,40 @@ galleryGrid.addEventListener('scroll', () => {
 // Image Gallery Expand
 document.querySelectorAll('.expand-btn').forEach(button => {
     button.addEventListener('click', () => button.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
+    history.pushState(null, null, location.href);
 });
 document.querySelectorAll('.close-overlay').forEach(closeBtn => {
     closeBtn.addEventListener('click', () => closeBtn.closest('.gallery-overlay').style.display = 'none');
+    //history.replaceState(null, null, location.href);
 });
 
+window.addEventListener('popstate', () => {
+    document.querySelectorAll('.gallery-overlay').forEach(overlay => {
+        if (overlay.style.display === 'flex') {
+            overlay.style.display = 'none';
+        }
+    });
+});
+
+   // debounce function
+    function debounce(func, delay) {
+     let timeout;
+     return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), delay);
+     };
+    }
 
     // Toggle Mobile/ Desktop Navigation
     const toggleNavVisibility = () => {
-        const isMobile = window.innerWidth <= 768;
+        const isMobile = window.innerWidth <= 840;
         desktopNav.style.display = isMobile ? 'none' : 'block';
         mobileFloatNav.style.display = isMobile ? 'flex' : 'none';
         navToggleButton.style.display = isMobile ? 'block' : 'none';
     };
 
-    window.addEventListener("resize", toggleNavVisibility);
+    window.addEventListener('resize', debounce(toggleNavVisibility, 150));
+    
     toggleNavVisibility();
 
     // Show/Hide Mobile Navigation on button click

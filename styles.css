@@ -5,6 +5,8 @@
     --text: #333333;
     --button-bg: #008cba;
     --button-text: #ffffff;
+    --card-hover-bg: linear-gradient(135deg, #e0eaff, #f9f9f9);
+    --card-hover-color: #121212;
 }
 
 [data-theme="dark"] {
@@ -13,6 +15,8 @@
     --text: rgba(202, 198, 191, 0.87);
     --button-bg: #444444;
     --button-text: #f5f5f5;
+    --card-hover-bg: radial-gradient(circle at 50% 30%, #1a1a2e, #0f0f1c);
+    --card-hover-color: #cfcfcf;
 }
 
 body {
@@ -72,7 +76,7 @@ body {
 }
 
 .logo {
-    height: 40px;
+    height: 50px;
 }
 
 .search-bar {
@@ -274,6 +278,7 @@ body {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    max-width: 580px;
 }
 
 #formResponse {
@@ -353,8 +358,8 @@ body {
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #e0eaff, #f9f9f9);
-    color: #121212;
+    background: var(--card-hover-bg);
+    color: var(--card-hover-color);
 }
 
 .feature-card .emoji {
@@ -575,9 +580,9 @@ body {
 
 .nav-segment {
     color: #fff;
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
-    width: 60px;
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -626,3 +631,15 @@ table.deployment-steps td {
     font-size: 1.5em;
     margin-bottom: 15px;    
 }
+
+p {
+    text-align: left;
+    text-indent: 10px;
+  }
+
+  #section1, #section2, #section6  {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
