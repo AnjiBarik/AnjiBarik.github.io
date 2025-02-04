@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
      const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
-        document.querySelector('.cloud-banner')?.setAttribute('data-theme', theme);
-        //localStorage.setItem('theme', theme);
+        document.querySelector('.cloud-banner')?.setAttribute('data-theme', theme);        
         try {
             localStorage.setItem('theme', theme);
         } catch (error) {

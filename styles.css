@@ -79,6 +79,23 @@ body {
     height: 50px;
 }
 
+.logo:hover, 
+.logo:active { 
+  transform: rotate(30deg); 
+  animation: rotateBack 0.6s ease-in-out forwards; 
+} 
+@keyframes rotateBack { 
+  0% { 
+    transform: rotate(30deg); 
+  } 
+  50% { 
+    transform: rotate(-30deg); 
+  } 
+  100% {
+     transform: rotate(0deg); 
+    } 
+  }
+
 .search-bar {
     padding: 5px;
     border-radius: 4px;
@@ -410,13 +427,13 @@ body {
 .cloud-banner {
     position: relative;
     height: 200px;
-    overflow: hidden;
-        /* text-align: center; */
-        padding: 30px;
-        color: #f0f0f0;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden;       
+    padding: 30px;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     transition: background 0.5s;
     background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
+    cursor: url('img/Vp.gif'), auto;
 }
 
 .cloud-banner[data-theme="dark"] {
@@ -449,14 +466,14 @@ body {
 .cloud {
     position: absolute;
     width: 150px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.8);
+    height: 80px;    
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 50%;
-    opacity: 0.9;
-    box-shadow: 60px 20px 0px rgba(255, 255, 255, 0.7), 
-                100px 30px 0px rgba(255, 255, 255, 0.6);
+    opacity: 0.6;
+    box-shadow: 30px 10px 0px rgba(255, 255, 255, 0.8),60px 20px 1px rgba(255, 255, 255, 0.7),90px 20px 2px rgba(255, 255, 255, 0.6), 10px 10px 0px rgba(255, 255, 255, 0.5),100px 30px 0px rgba(255, 255, 255, 0.4);
     animation: moveClouds 30s linear infinite;
-    transform: rotate(10deg);
+    animation-delay: 0s;
+    transform: rotate(90deg);
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
     border: 2px dashed var(--card-hover-bg);
 }
