@@ -405,6 +405,8 @@ body {
 .plus-icon {
     margin-right: 10px;
     transition: transform 0.3s;
+    padding: 0 5px;
+    font-size: 22px;
 }
 
 .faq-answer {
