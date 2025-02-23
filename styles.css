@@ -204,7 +204,7 @@ body {
     gap: 15px;
     overflow-x: auto;
     scroll-behavior: unset;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
 .gallery-item {
@@ -296,6 +296,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 580px;
+    outline: none;
 }
 
 #formResponse {
@@ -476,7 +477,7 @@ body {
     animation: moveClouds 30s linear infinite;
     animation-delay: 0s;
     transform: rotate(90deg);
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+    filter: blur(15px);
     border: 2px dashed var(--card-hover-bg);
 }
 
@@ -496,7 +497,7 @@ body {
 /* Animation */
 @keyframes moveClouds {
     0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); }
+    100% { transform: translateX(150vw); }
 }
 
 /* Desktop Nav */
@@ -521,6 +522,10 @@ body {
 
 .desktop-nav a:hover {
     background: #555;
+}
+
+.cta-link {
+    color: blueviolet;
 }
 
 /* Fixed Position Styling */
@@ -586,7 +591,7 @@ body {
 }
 
 .center-circle {
-    background: #333;
+    background: var(--button-bg);
     color: #fff;
     font-size: 18px;
     width: 50px;
