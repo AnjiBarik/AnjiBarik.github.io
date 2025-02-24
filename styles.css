@@ -309,11 +309,13 @@ body {
     background-color: #666;
     color: white;
     padding: 10px;
-    text-align: center;
+    /* text-align: center; */
     align-items: center;
     display: flex;
     justify-content: center;
     border-radius: 5px;
+    text-align: left;
+    text-indent: 10px;
 }
 
 .footer-container a {
@@ -481,9 +483,9 @@ body {
     border: 2px dashed var(--card-hover-bg);
 }
 
-.cloud1 { top: 30px; left: -200px; width: 180px; height: 100px; animation-delay: 0s; }
-.cloud2 { top: 60px; left: -250px; width: 220px; height: 120px; animation-delay: 10s; }
-.cloud3 { top: 90px; left: -300px; width: 200px; height: 110px; animation-delay: 20s; }
+.cloud1 { top: 30px; left: -100px; width: 100px; height: 100px; animation-delay: 0s; }
+.cloud2 { top: 60px; left: -150px; width: 150px; height: 120px; animation-delay: 3s; }
+.cloud3 { top: 90px; left: -300px; width: 180px; height: 110px; animation-delay: 10s; }
 
 
 .cloud-banner[data-theme="dark"] .cloud {
