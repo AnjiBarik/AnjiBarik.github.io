@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             localStorage.setItem('theme', theme);
         } catch (error) {
-            console.error("Error writing theme to localStorage:", error.message);
+            //console.error("Error writing theme to localStorage:", error.message);
         }
         
         const sunIcon = themeToggle.querySelector('.icon-sun');
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             savedTheme = localStorage.getItem('theme');
         } catch (error) {
-            console.error("Error reading theme from localStorage:", error.message);
+            //console.error("Error reading theme from localStorage:", error.message);
             savedTheme = null; 
         }
     
@@ -170,7 +170,7 @@ window.addEventListener('popstate', () => {
         try {
             return JSON.parse(localStorage.getItem(key)) || [];
         } catch (error) {
-            console.error("Error reading from localStorage:", error.message);
+            //console.error("Error reading from localStorage:", error.message);
             return [];
         }
     }
@@ -180,7 +180,7 @@ window.addEventListener('popstate', () => {
         try {
             localStorage.setItem(key, JSON.stringify(value));
         } catch (error) {
-            console.error("Error writing to localStorage:", error.message);
+            //console.error("Error writing to localStorage:", error.message);
         }
     }
 
@@ -233,7 +233,7 @@ window.addEventListener('popstate', () => {
                 formResponse.style.color = 'red';
             }
         } catch (error) {
-            console.error('Error sending form:', error.message);
+            //console.error('Error sending form:', error.message);
             formResponse.textContent = 'Error connecting to the server. Please try again.';
             formResponse.style.color = 'red';
         } finally {
