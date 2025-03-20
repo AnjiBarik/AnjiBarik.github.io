@@ -11,7 +11,7 @@
 }
 
 [data-theme="dark"] {
-    --header-bg: #3b33573b;
+    --header-bg: radial-gradient(circle at 30% 70%, #10101e, #131333);
     --background: #121212;
     --text: rgba(202, 198, 191, 0.87);
     --button-bg: #444444;
@@ -74,7 +74,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: var(--header-bg);
+    background: var(--header-bg);
     border-radius: 17px 17px 0 0;
 }
 
@@ -397,18 +397,21 @@ body {
 
 .feature-card .emoji {
     font-size: 2em;
-    margin-bottom: 10px;
+    /* margin: 10px 5px 5px 10px; */
+    /* text-align: left; */
 }
 
 .feature-card h3{
-  margin: 10px auto 5px auto;
-  min-height: 2.5rem;
+    margin: 15px auto 5px 5px;
+    min-height: 2.5rem;
+    text-align: center;
 }
 
 .feature-card p {
     font-size: large;
     line-height: 1.5;
-    margin: 5px auto;
+    margin: 10px auto;
+    /* text-align: center; */
 }
 
 /* FAQ Section */
@@ -547,7 +550,7 @@ body {
 }
 
 .desktop-nav a:hover {
-    background: #555;
+    background: #005f56;
 }
 
 .cta-link {
@@ -573,7 +576,7 @@ body {
     right: 20px;    
     width: 100px;
     height: 100px;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--nav-bg);
     border-radius: 50%;
     z-index: 10;
     padding: 10px;
@@ -586,7 +589,7 @@ body {
     position: fixed;   
     right: 20px;
     transform: translateY(-50%);
-    background: #444;
+    background: var(--nav-bg);
     color: #fff;    
     cursor: pointer;
     z-index: 100;
@@ -640,7 +643,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #444;
+    background: var(--nav-bg);
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
@@ -648,7 +651,7 @@ body {
 }
 
 .nav-segment:hover, .nav-segment:active {
-    background: #666;
+    background: #005f56;
     z-index: 100;
 }
 
