@@ -316,7 +316,7 @@ body {
 
 /* Footer */
 .footer-container {
-    background-color: var(--nav-bg);
+    background: var(--nav-bg);
     color: white;
     padding: 10px;
     text-align: center;
@@ -396,9 +396,7 @@ body {
 }
 
 .feature-card .emoji {
-    font-size: 2em;
-    /* margin: 10px 5px 5px 10px; */
-    /* text-align: left; */
+    font-size: 2em;   
 }
 
 .feature-card h3{
