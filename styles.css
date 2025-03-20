@@ -1,16 +1,17 @@
 /* Basic Styles */
 :root {
-    --header-bg: #f5f5f5;
-    --background: #f0f0f0;
+    --header-bg: #5d9bea69;
+    --background: #efe9e0;
     --text: #333333;
     --button-bg: #008cba;
     --button-text: #ffffff;
     --card-hover-bg: linear-gradient(135deg, #e0eaff, #f9f9f9);
     --card-hover-color: #121212;
+    --nav-bg: #536878;
 }
 
 [data-theme="dark"] {
-    --header-bg: #333333;
+    --header-bg: #3b33573b;
     --background: #121212;
     --text: rgba(202, 198, 191, 0.87);
     --button-bg: #444444;
@@ -27,6 +28,7 @@ body {
     color: var(--text);
     transition: background-color 0.5s ease, color 0.5s ease;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 #theme-toggle {
@@ -323,6 +325,10 @@ body {
     margin: 0 5px;
 }
 
+.footer-container a:hover {   
+    transform: scale(1.05);
+}
+
 /* Social Icons */
 .social-icons {
     display: flex;
@@ -368,8 +374,9 @@ body {
 .feature-card {    
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 200px;
+    padding: 20px 20px 40px 20px;
+    width: 220px;
+    height: 200px;
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
@@ -506,7 +513,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background: #333;
+    background: var(--nav-bg);
     padding: 10px 0;
     width: 100%;
     opacity: 0.8;
@@ -671,3 +678,65 @@ p {
     display: flex;
     flex-direction: column;
   }
+
+  /* side-nav */
+.side-nav {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 50%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 9999;
+}
+
+.side-nav-segment {
+    cursor: pointer;
+    background: var(--nav-bg);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.side-nav-segment:hover {
+    background-color: #005f56;
+    opacity: 1;
+}
+
+.side-nav-segment.active {
+    background-color: #004d40;
+    transform: translateY(5px);
+}
+
+.side-nav-segment.active + .side-nav-segment {
+    transform: translateY(15px);
+}
+
+.scroll-top {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #87CEEB, #f0f8ff);    
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    transition: background 0.3s ease;
+    opacity: 0.8;
+}
+
+.scroll-top:hover {
+    background: #005f56;
+    opacity: 1;
+}
+
+

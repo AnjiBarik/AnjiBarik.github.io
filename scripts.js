@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const desktopNav = document.querySelector(".desktop-nav");
     const centerCircle = document.querySelector(".center-circle");
     const navSegments = document.querySelectorAll(".mobile-float-nav .nav-segment");    
+
+    const segments = document.querySelectorAll(".side-nav-segment");
+    const scrollTopBtn = document.querySelector(".scroll-top");
+    const sideNav = document.querySelector(".side-nav");
   
      const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
@@ -118,6 +122,7 @@ window.addEventListener('popstate', () => {
         desktopNav.style.display = isMobile ? 'none' : 'block';
         mobileFloatNav.style.display = isMobile ? 'flex' : 'none';
         navToggleButton.style.display = isMobile ? 'block' : 'none';
+        sideNav.style.display = isMobile ? 'none' : 'flex';
     };
 
     window.addEventListener('resize', debounce(toggleNavVisibility, 150));
@@ -240,6 +245,26 @@ window.addEventListener('popstate', () => {
             submitBtn.textContent = 'Send Message';
             submitBtn.disabled = false;
         }
+    });    
+
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
+
+    function updateActiveSegment(target) {
+        segments.forEach(segment => segment.classList.remove("active"));
+        target.classList.add("active");
+    }
+
+    segments.forEach(segment => {
+        segment.addEventListener("click", function () {
+            const sectionId = this.getAttribute("data-target");
+            scrollToSection(sectionId);
+            updateActiveSegment(this);
+        });
     });
 
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 });
