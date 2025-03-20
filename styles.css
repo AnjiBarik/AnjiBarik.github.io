@@ -296,10 +296,17 @@ body {
 #contactForm textarea {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     max-width: 580px;
     outline: none;
+    background: var(--card-hover-bg);
+    color: var(--text);
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border: 2px solid; 
 }
 
 #formResponse {
@@ -309,7 +316,7 @@ body {
 
 /* Footer */
 .footer-container {
-    background-color: #666;
+    background-color: var(--nav-bg);
     color: white;
     padding: 10px;
     text-align: center;
@@ -391,6 +398,17 @@ body {
 .feature-card .emoji {
     font-size: 2em;
     margin-bottom: 10px;
+}
+
+.feature-card h3{
+  margin: 10px auto 5px auto;
+  min-height: 2.5rem;
+}
+
+.feature-card p {
+    font-size: large;
+    line-height: 1.5;
+    margin: 5px auto;
 }
 
 /* FAQ Section */
@@ -690,7 +708,7 @@ p {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .side-nav-segment {

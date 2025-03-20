@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileFloatNav = document.querySelector(".mobile-float-nav");
     const desktopNav = document.querySelector(".desktop-nav");
     const centerCircle = document.querySelector(".center-circle");
-    const navSegments = document.querySelectorAll(".mobile-float-nav .nav-segment");    
-
+    const navSegments = document.querySelectorAll(".mobile-float-nav .nav-segment");
     const segments = document.querySelectorAll(".side-nav-segment");
     const scrollTopBtn = document.querySelector(".scroll-top");
     const sideNav = document.querySelector(".side-nav");
@@ -154,7 +153,7 @@ window.addEventListener('popstate', () => {
 
     // Fix desktop navigation at top when scrolled
     const navOffsetTop = desktopNav.offsetTop;
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", () => {      
         desktopNav.classList.toggle("fixed", window.scrollY > navOffsetTop);
     });
 
@@ -262,7 +261,7 @@ window.addEventListener('popstate', () => {
             scrollToSection(sectionId);
             updateActiveSegment(this);
         });
-    });
+    });    
 
     scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
