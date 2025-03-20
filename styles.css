@@ -73,6 +73,7 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     background-color: var(--header-bg);
+    border-radius: 17px 17px 0 0;
 }
 
 .logo {
@@ -313,9 +314,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
-    /* text-align: left;
-    text-indent: 10px; */
+    border-radius: 0 0 17px 17px;
 }
 
 .footer-container a {
@@ -371,7 +370,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 200px;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
@@ -663,7 +662,7 @@ table.deployment-steps td {
 
 p {
     text-align: left;
-    text-indent: 10px;
+    text-indent: 5px;
   }
 
   #section1, #section2, #section6  {
