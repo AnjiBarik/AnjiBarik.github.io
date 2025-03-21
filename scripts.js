@@ -247,8 +247,18 @@ window.addEventListener('popstate', () => {
     });    
 
     function scrollToSection(sectionId) {
-        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        const section = document.getElementById(sectionId);
+        if (!section) return; 
+    
+        const offset = 60;
+        const top = section.offsetTop - offset;
+    
+        window.scrollTo({
+            top: top,
+            behavior: "smooth"
+        });
     }
+    
 
     function updateActiveSegment(target) {
         segments.forEach(segment => segment.classList.remove("active"));
@@ -258,6 +268,7 @@ window.addEventListener('popstate', () => {
     segments.forEach(segment => {
         segment.addEventListener("click", function () {
             const sectionId = this.getAttribute("data-target");
+            if (!sectionId) return;
             scrollToSection(sectionId);
             updateActiveSegment(this);
         });
@@ -265,5 +276,33 @@ window.addEventListener('popstate', () => {
 
     scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+
+    const sections = document.querySelectorAll("section"); 
+    
+    function highlightActiveSegment() {
+        let scrollPosition = window.scrollY + desktopNav.offsetHeight + 50; 
+
+        sections.forEach((section) => {
+            const sectionId = section.getAttribute("id");
+            if (!sectionId) return;
+
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                segments.forEach(segment => {
+                    segment.classList.remove("active");
+                    if (segment.getAttribute("data-target") === sectionId) {                        
+                        segment.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+    
+    window.addEventListener("scroll", () => {
+        highlightActiveSegment();
     });
 });

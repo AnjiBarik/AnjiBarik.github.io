@@ -302,6 +302,7 @@ body {
     outline: none;
     background: var(--card-hover-bg);
     color: var(--text);
+    opacity: 0.5;
 }
 
 #contactForm input:focus,
@@ -758,4 +759,50 @@ p {
     opacity: 1;
 }
 
+/* deploy step */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
 
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    color: var(--text);
+    margin-bottom: 2px;
+    justify-content: left;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-bg);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+    box-shadow: var(--card-hover-bg);
+}
+
+.step-content {
+    flex: 1;
+    font-family: 'Arial', sans-serif;   
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.step-content p {
+    margin: 0;
+}
+
+.deployment-steps {
+    margin: 20px 0;
+}
