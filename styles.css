@@ -31,6 +31,10 @@ body {
     scroll-behavior: smooth;
 }
 
+.emoji {
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; 
+}
+
 #theme-toggle {
     background: none;
     border: none;
@@ -133,11 +137,14 @@ h2 {
 h4 {
     font-size: larger;
     font-weight: 300;   
-    margin: 20px;    
+    margin: 20px auto;    
     letter-spacing: 1px;    
-    text-align: justify;
-    text-align-last: left;
+    text-align: justify;   
     text-indent: 5px;
+    max-width: 1100px;
+    /* hyphens: manual; */
+    word-spacing: -2px;
+    line-height: 1.5;
   }
 
 /* Image Gallery */
@@ -420,8 +427,7 @@ h4 {
     font-size: large;
     line-height: 1.5;
     margin: 10px auto;
-    text-align: justify;
-    text-align-last: left;
+    text-align: justify;    
 }
 
 /* FAQ Section */
