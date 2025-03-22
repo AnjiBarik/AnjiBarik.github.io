@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manrope', sans-serif;
     margin: 10px;
     padding: 10px;
     background-color: var(--background);
@@ -124,6 +124,22 @@ body {
     opacity: 0.6;
 }
 
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+h4 {
+    font-size: larger;
+    font-weight: 300;   
+    margin: 20px;    
+    letter-spacing: 1px;    
+    text-align: justify;
+    text-align-last: left;
+    text-indent: 5px;
+  }
+
 /* Image Gallery */
 .image-gallery {
     padding: 20px;
@@ -137,8 +153,7 @@ body {
 }
 
 .thumbnail {    
-    border-radius: 8px;
-    /* cursor: pointer; */
+    border-radius: 8px;    
     height: 200px;
     width: 200px;
     object-fit: cover
@@ -379,21 +394,16 @@ body {
     margin-top: 20px;
 }
 
-.feature-card {    
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px 20px 40px 20px;
-    width: 220px;
+.feature-card {      
+    padding: 20px;
+    width: 280px;
     height: 200px;
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    background: var(--card-hover-bg);
-    color: var(--card-hover-color);
+    transform: translateY(-5px);    
 }
 
 .feature-card .emoji {
@@ -410,7 +420,8 @@ body {
     font-size: large;
     line-height: 1.5;
     margin: 10px auto;
-    /* text-align: center; */
+    text-align: justify;
+    text-align-last: left;
 }
 
 /* FAQ Section */
@@ -473,9 +484,12 @@ body {
 }
 
 .cloud-banner h1 {
-    font-size: 2.5em;
-    z-index: 100;
-    position: relative;
+  font-size: 3.5em;
+  z-index: 100;
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 10px;
 }
 
 .cloud-banner .moon {
@@ -673,7 +687,7 @@ table.deployment-steps th {
 /* Table cell style */
 table.deployment-steps td {
     padding: 10px;
-    font-size: 1em;   
+    font-size: 1.2em;   
     text-align: left;
 }
 
@@ -690,6 +704,7 @@ table.deployment-steps td {
 p {
     text-align: left;
     text-indent: 5px;
+    font-size: larger;
   }
 
   #section1, #section2, #section6  {
@@ -793,14 +808,13 @@ p {
 }
 
 .step-content {
-    flex: 1;
-    font-family: 'Arial', sans-serif;   
-    line-height: 1.6;
-    font-size: 16px;
+    flex: 1;     
+    line-height: 1.6;    
 }
 
 .step-content p {
     margin: 0;
+    font-size: larger;
 }
 
 .deployment-steps {
