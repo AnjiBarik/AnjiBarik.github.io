@@ -89,8 +89,14 @@ galleryGrid.addEventListener('scroll', () => {
 });
 
 // Image Gallery Expand
-document.querySelectorAll('.expand-btn').forEach(button => {
-    button.addEventListener('click', () => button.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
+
+// document.querySelectorAll('.expand-btn').forEach(button => {
+//     button.addEventListener('click', () => button.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
+//     history.pushState(null, null, location.href);
+// });
+
+document.querySelectorAll('.thumbnail').forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => thumbnail.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
     history.pushState(null, null, location.href);
 });
 document.querySelectorAll('.close-overlay').forEach(closeBtn => {

@@ -163,7 +163,8 @@ h4 {
     border-radius: 8px;    
     height: 200px;
     width: 200px;
-    object-fit: cover
+    object-fit: cover;
+    cursor: zoom-in;
 }
 
 .thumbnail:hover {
@@ -173,12 +174,14 @@ h4 {
 
 .expand-btn {   
     color: var(--button-text);
-    padding: 5px;
+    padding: 4px 6px;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
     top: 5px;
     right: 35px;
+    background: var(--button-text);
+    opacity: 0.5;
 }
 
 .gallery-overlay {
@@ -228,8 +231,12 @@ h4 {
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    scroll-behavior: unset;
-    /* scrollbar-width: none; */
+}
+
+@supports (scrollbar-width: none) {
+    .gallery-grid {
+        scrollbar-width: none;
+    }
 }
 
 .gallery-item {
@@ -446,6 +453,8 @@ h4 {
     border-radius: 5px;
     display: flex;
     align-items: center;
+    text-align: left;
+    text-indent: 5px;
 }
 
 .plus-icon {
