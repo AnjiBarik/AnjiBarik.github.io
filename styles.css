@@ -175,8 +175,7 @@ h4 {
 .expand-btn {   
     color: var(--button-text);
     padding: 4px 6px;
-    border-radius: 50%;
-    cursor: pointer;
+    border-radius: 50%;    
     position: absolute;
     top: 5px;
     right: 35px;
@@ -404,14 +403,14 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
 }
 
 .feature-card {      
     padding: 20px;
     width: 280px;
-    height: 200px;
+    height: 180px;
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
@@ -679,7 +678,12 @@ h4 {
 }
 
 .nav-segment:hover, .nav-segment:active {
-    background: #005f56;
+    background: #004d40;
+    z-index: 100;
+}
+
+.nav-segment.active{
+    background: #004d40;
     z-index: 100;
 }
 

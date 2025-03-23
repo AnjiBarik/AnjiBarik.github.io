@@ -90,18 +90,21 @@ galleryGrid.addEventListener('scroll', () => {
 
 // Image Gallery Expand
 
-// document.querySelectorAll('.expand-btn').forEach(button => {
-//     button.addEventListener('click', () => button.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
-//     history.pushState(null, null, location.href);
-// });
+document.querySelectorAll('.expand-btn').forEach(button => {
+    button.addEventListener('click', () => button.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
+    history.pushState(null, null, location.href);
+});
 
 document.querySelectorAll('.thumbnail').forEach(thumbnail => {
     thumbnail.addEventListener('click', () => thumbnail.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
     history.pushState(null, null, location.href);
 });
 document.querySelectorAll('.close-overlay').forEach(closeBtn => {
-    closeBtn.addEventListener('click', () => closeBtn.closest('.gallery-overlay').style.display = 'none');
-    //history.replaceState(null, null, location.href);
+    closeBtn.addEventListener('click', () => {
+        closeBtn.closest('.gallery-overlay').style.display = 'none';
+        //history.replaceState(null, null, location.href);
+        scrollToSection('section8'); 
+    });
 });
 
 window.addEventListener('popstate', () => {
@@ -159,9 +162,10 @@ window.addEventListener('popstate', () => {
 
     // Fix desktop navigation at top when scrolled
     const navOffsetTop = desktopNav.offsetTop;
-    window.addEventListener("scroll", () => {      
-        desktopNav.classList.toggle("fixed", window.scrollY > navOffsetTop);
-    });
+
+    function handleScroll() {
+      desktopNav.classList.toggle("fixed", window.scrollY > navOffsetTop);
+    }    
 
     // Form Validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;    
@@ -298,7 +302,8 @@ window.addEventListener('popstate', () => {
             const sectionBottom = sectionTop + section.offsetHeight;
             
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                segments.forEach(segment => {
+                const activeSegments = desktopNav.style.display === 'block' ? segments : navSegments;
+                activeSegments.forEach(segment => {
                     segment.classList.remove("active");
                     if (segment.getAttribute("data-target") === sectionId) {                        
                         segment.classList.add("active");
@@ -306,9 +311,11 @@ window.addEventListener('popstate', () => {
                 });
             }
         });
-    }
-    
-    window.addEventListener("scroll", () => {
+    }    
+
+    window.addEventListener("scroll", debounce(() => {
         highlightActiveSegment();
-    });
+        handleScroll();
+    }, 100));   
+    
 });
