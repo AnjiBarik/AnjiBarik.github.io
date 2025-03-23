@@ -687,6 +687,20 @@ h4 {
     z-index: 100;
 }
 
+@media (min-width: 841px) {
+    #section1,
+    #section2,
+    #section3,
+    #section5,
+    #section6,
+    #section7,
+    #section8,
+    #section9,
+    #section10 {
+      padding-top: 45px;       
+    }
+  }
+
 /* Hide table borders */
 table.deployment-steps {
     border-collapse: collapse;
