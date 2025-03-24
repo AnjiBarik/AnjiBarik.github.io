@@ -8,6 +8,7 @@
     --card-hover-bg: linear-gradient(135deg, #e0eaff, #f9f9f9);
     --card-hover-color: #121212;
     --nav-bg: #536878;
+    --active-bg: #004d40;
 }
 
 [data-theme="dark"] {
@@ -678,12 +679,12 @@ h4 {
 }
 
 .nav-segment:hover, .nav-segment:active {
-    background: #004d40;
+    background: var(--active-bg);
     z-index: 100;
 }
 
 .nav-segment.active{
-    background: #004d40;
+    background: var(--active-bg);
     z-index: 100;
 }
 
@@ -697,7 +698,7 @@ h4 {
     #section8,
     #section9,
     #section10 {
-      padding-top: 45px;       
+        scroll-margin-top: 45px;       
     }
   }
 
@@ -781,7 +782,7 @@ p {
 }
 
 .side-nav-segment.active {
-    background-color: #004d40;
+    background-color:var(--active-bg);
     transform: translateY(5px);
 }
 

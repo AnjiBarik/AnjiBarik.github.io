@@ -111,6 +111,7 @@ window.addEventListener('popstate', () => {
     document.querySelectorAll('.gallery-overlay').forEach(overlay => {
         if (overlay.style.display === 'flex') {
             overlay.style.display = 'none';
+            scrollToSection('section8'); 
         }
     });
 });
@@ -314,8 +315,8 @@ window.addEventListener('popstate', () => {
     }    
 
     window.addEventListener("scroll", debounce(() => {
-        highlightActiveSegment();
         handleScroll();
-    }, 100));   
+        highlightActiveSegment();        
+    }, 50));   
     
 });
