@@ -99,21 +99,24 @@ document.querySelectorAll('.thumbnail').forEach(thumbnail => {
     thumbnail.addEventListener('click', () => thumbnail.closest('.gallery-item').querySelector('.gallery-overlay').style.display = 'flex');
     history.pushState(null, null, location.href);
 });
+
+function closeOverlayAndScroll() {
+    document.querySelectorAll('.gallery-overlay').forEach(overlay => {
+        if (overlay.style.display === 'flex') {
+            overlay.style.display = 'none';
+            scrollToSection('section8');
+        }
+    });
+}
+
 document.querySelectorAll('.close-overlay').forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
-        closeBtn.closest('.gallery-overlay').style.display = 'none';
-        //history.replaceState(null, null, location.href);
-        scrollToSection('section8'); 
+        closeOverlayAndScroll();
     });
 });
 
 window.addEventListener('popstate', () => {
-    document.querySelectorAll('.gallery-overlay').forEach(overlay => {
-        if (overlay.style.display === 'flex') {
-            overlay.style.display = 'none';
-            scrollToSection('section8'); 
-        }
-    });
+    closeOverlayAndScroll();
 });
 
    // debounce function
